@@ -1,0 +1,117 @@
+# K-Net Concepts
+
+This directory contains the conceptual and architectural foundations of the K-Net project.
+
+## Purpose
+
+The documents in this folder describe the long-term vision, architectural designs, theoretical models, and future research directions of K-Net.
+
+These documents should be considered:
+
+* Concept papers
+* Architecture proposals
+* Research drafts
+* Design specifications
+
+and not necessarily validated experimental results.
+
+## Important Note
+
+Some ideas described in these documents are implemented in the current MVP, while others remain research hypotheses or future development goals.
+
+Experimental validation, benchmarking, and performance evaluation are documented separately as they become available.
+
+## Structure
+
+The concept series is organized as a collection of independent but related documents.
+
+Examples include:
+
+* K-Net Core
+* Acropolis Architecture
+* Shield Architecture
+* Why Engine
+* Parliament of Minds
+* Yggdrasil
+
+Each document represents a component, generation, or conceptual extension of the K-Net ecosystem.
+
+## Research Philosophy
+
+K-Net is being developed through an iterative process:
+
+1. Concept Design
+2. Prototype Implementation
+3. Experimental Validation
+4. Benchmarking
+5. Publication
+
+This folder primarily covers Step 1.
+
+## Status
+
+Current status: Active Research
+
+The content of these documents may evolve as new implementations, experiments, and benchmarks are completed.
+
+================================================================================================================
+
+# مفاهیم و معماری‌های K-Net
+
+این پوشه شامل اسناد مفهومی، معماری‌های پیشنهادی، و طرح‌های پژوهشی پروژه K-Net است.
+
+## هدف این بخش
+
+محتوای این پوشه برای تشریح چشم‌انداز بلندمدت، ایده‌های معماری، مدل‌های نظری، و مسیرهای تحقیقاتی آینده K-Net تهیه شده است.
+
+اسناد موجود در این پوشه را باید به عنوان موارد زیر در نظر گرفت:
+
+* مقالات مفهومی
+* طرح‌های معماری
+* یادداشت‌های پژوهشی
+* مشخصات طراحی سیستم
+
+و نه لزوماً نتایج تجربی اثبات‌شده.
+
+## نکته مهم
+
+برخی از ایده‌های مطرح‌شده در این اسناد در نسخه فعلی MVP پیاده‌سازی شده‌اند و برخی دیگر هنوز در مرحله طراحی، تحقیق یا توسعه قرار دارند.
+
+اعتبارسنجی تجربی، بنچمارک‌ها، و ارزیابی عملکرد به صورت جداگانه و همزمان با پیشرفت پروژه منتشر خواهند شد.
+
+## ساختار مجموعه
+
+این مجموعه از چندین سند مستقل اما مرتبط تشکیل شده است که هر کدام بخشی از اکوسیستم K-Net را توصیف می‌کنند.
+
+نمونه‌هایی از این اسناد:
+
+* K-Net Core
+* Acropolis Architecture
+* Shield
+* Why Engine
+* Parliament of Minds
+* Yggdrasil
+
+هر سند یک مؤلفه، نسل، یا گسترش مفهومی از K-Net را معرفی می‌کند.
+
+## فلسفه توسعه
+
+توسعه K-Net بر اساس چرخه زیر انجام می‌شود:
+
+۱. طراحی مفهوم (Concept Design)
+
+۲. پیاده‌سازی نمونه اولیه (Prototype Implementation)
+
+۳. اعتبارسنجی تجربی (Experimental Validation)
+
+۴. بنچمارک و ارزیابی (Benchmarking)
+
+۵. انتشار و توسعه (Publication & Expansion)
+
+تمرکز اصلی اسناد این پوشه بر مرحله نخست، یعنی طراحی و تبیین مفاهیم و معماری‌ها است.
+
+## وضعیت فعلی
+
+وضعیت: پژوهش فعال
+
+محتوای این اسناد ممکن است با پیشرفت پیاده‌سازی‌ها، آزمایش‌ها و نتایج جدید به‌روزرسانی شود.
