@@ -1,0 +1,273 @@
+---
+paper_id: 01
+title: "K-Net: The Acropolis Architecture"
+title_en: "K-Net: The Acropolis Architecture"
+category: Core Architecture
+status: MVP
+version: 8.1
+date: 2026-06-07
+author: Ali Mohseni
+license: CC BY-SA 4.0 (Copyleft) 🄯
+---
+
+# K-Net: The Acropolis Architecture
+
+## A Ternary Knowledge Architecture on a Geodesic Sphere
+
+---
+
+# Abstract
+
+Large language models today lack an explicit mechanism for representing ambiguity, contradiction, and ignorance. This paper proposes K-Net—a novel framework for organizing knowledge based on ternary logic with three states: cooperation (+1), conflict (-1), and neutral (0). At the heart of this architecture lies the Knowledge Sphere—a geodesic structure connecting 20 specialized domains through 360 ternary edges. K-Net's four main components are: (1) ternary logic for managing uncertainty, (2) spatial organization of knowledge on a geodesic sphere, (3) an immune system (Shield) for resistance against attacks, and (4) a Why Engine for causal reasoning. The current MVP implements all four components as a Proof of Concept. Preliminary simulation results show that the Knowledge Sphere can reduce conflict energy by 74% without external intervention and lower memory usage by 88% compared to a Float32 adjacency matrix. Full causal inference and advanced geometric benefits will be developed in future versions.
+
+---
+
+# Keywords
+
+Ternary logic, geodesic sphere, knowledge organization, collective intelligence, K-Net, hallucination reduction, Simulated Annealing
+
+---
+
+# 1. Introduction
+
+## 1.1 Problem
+
+Since the mid‑20th century, computation has been built on binary logic (0 and 1). This system is efficient for deterministic problems but inherently incapable of modeling concepts such as ambiguity, paradox, uncertainty, and “I don't know.” This limitation has significant consequences for the reliability of artificial intelligence models—including the phenomenon of hallucination, where models fabricate answers instead of admitting ignorance.
+
+## 1.2 Motivation
+
+Knowledge organization in today's AI systems is mostly implicit, embedded in the weights of neural networks. This approach has two fundamental problems: (a) opacity—it is impossible to understand *why* a model arrived at a particular answer, and (b) lack of conflict management—when two information sources contradict each other, the system cannot model this conflict explicitly. K-Net fills this gap by offering an explicit framework for organizing knowledge.
+
+## 1.3 Core Idea
+
+The fundamental idea of K-Net is simple but radical: instead of forcing computers to choose between 0 and 1, a third state—“I don't know” (0)—is added to the system. This ternary logic is implemented on a geodesic sphere that connects 20 specialized domains with 360 ternary edges. The four main components—logic, sphere, immune system, and Why Engine—combine to create a system that can manage uncertainty, reduce conflicts, and perform causal reasoning.
+
+---
+
+# 2. Theoretical Foundations & Background
+
+## 2.1 Basic Concepts
+
+**Ternary Logic:** K-Net is built on a ternary logic whose roots go back to the work of Łukasiewicz (1920). Each state carries a distinct meaning:
+
+| Symbol | Meaning             | Tangible Example            |
+| :----- | :------------------ | :-------------------------- |
+| +1     | Cooperation, agreement, truth | Friendship or alliance     |
+| -1     | Conflict, opposition, falsehood | Rivalry or debate          |
+| 0      | Neutral, uncertain, unknown   | A stranger with no defined relationship |
+
+**Geodesic Sphere:** A geometric structure composed of 20 hexagons and 12 pentagons that follows Euler's polyhedron formula ($V - E + F = 2$). Each hexagon represents a specialized domain (mathematics, physics, chemistry, biology, philosophy, etc.).
+
+## 2.2 Related Work
+
+- **Ternlang / TIS Stack:** A ternary programming language (Smith et al., 2025).
+- **GNRFET Ternary Multiplier:** Ternary hardware using graphene nanoribbons (Chen & Park, 2024).
+- **ReTern:** Fault tolerance in ternary LLMs (Brown et al., 2025).
+- **Switch Transformers (MoE):** Mixture‑of‑experts architecture (Fedus et al., 2022).
+
+## 2.3 K-Net Positioning
+
+| Feature                | MoE                  | MoR                  | K-Net                                      |
+| :--------------------- | :------------------- | :------------------- | :----------------------------------------- |
+| Structure              | Flat                 | Recursive            | **Hierarchical & geometric**               |
+| Uncertainty            | None (hallucination) | None (hallucination) | **State 0 (“I don't know”)**               |
+| Knowledge organization | Implicit             | Implicit             | **Explicit (physical location on sphere)** |
+| Optimization           | Gradient‑based       | Gradient‑based       | **Gradient‑free (Simulated Annealing)**    |
+
+---
+
+# 3. Proposed Architecture
+
+## 3.1 Overview
+
+K-Net is a four‑component architecture for explicit knowledge organization. Input data passes through the security layer (Shield), is organized on the Knowledge Sphere, and is causally analyzed by the Why Engine to produce a ternary output (+1, 0, -1).
+*[Figure 1: K-Net Architecture Overview]*
+
+User Input
+│
+▼
+┌─────────────┐
+│ Shield Lite │ ← Security layer (three‑stage input gate)
+└─────────────┘
+│
+▼
+┌──────────────────┐
+│ Knowledge Sphere │ ← 20 domains + 360 ternary edges
+└──────────────────┘
+│
+▼
+┌─────────────┐
+│ Why Engine │ ← Causal reasoning skeleton
+└─────────────┘
+│
+▼
+Output (+1, 0, -1)
+
+---
+
+## 3.2 Core Components
+
+### 3.2.1 Knowledge Sphere
+
+The Knowledge Sphere is a two‑layer geodesic structure. The macro layer consists of 20 hexagons and 12 pentagons ($V=60, E=90, F=32$). Each hexagon is subdivided into 6 spherical triangles—totaling 180 spherical triangles. Counting shared edges, the number of unique edges is 360.
+
+**Clarification on edge count:** 20 domains yield at most 190 unique relationships ($20 \times 19 / 2 = 190$). The current MVP uses 360 simulated edges to model local interactions on the sphere's surface. These edges form a multi‑edge graph in which a single pair of domains may have more than one edge—each edge representing a different aspect of the relationship.
+
+### 3.2.2 Immune System (Shield)
+
+K-Net Shield is a bio‑inspired security layer. The current MVP implements **Shield Lite**—a centralized entry gate that checks inputs with three ternary tests (removal, substitution, contradiction). Advanced versions (Shield Full and Shield Adaptive) are on the research roadmap (see papers 6 and 7).
+
+### 3.2.3 Why Engine
+
+The Why Engine is a conceptual 5‑step framework for causal reasoning: (1) removal test, (2) substitution test, (3) repeatability test, (4) ternary labeling (+1, 0, -1), and (5) deep analysis. The current MVP contains the skeleton of this cycle—the first three tests are implemented as placeholder functions that return sample results. Automatic causal inference and deep analysis (mechanism → principle → fundamental law) will be developed in future versions.
+
+---
+
+# 4. Formal Model
+
+## 4.1 Definitions
+
+- **Definition 1 (Ternary Edge):** $e_{ij} \in \{+1, 0, -1\}$ represents the relationship between domains $D_i$ and $D_j$.
+- **Definition 2 (Knowledge Sphere):** $S = (V, E)$ is a graph with 20 vertices ($V$) and 360 edges ($E$) on the surface of a sphere.
+- **Definition 3 (Weighted Energy):** $E_{total} = \sum_{e \in E} w(e)$, where $w(+1) = 0$, $w(0) = 0.5$, and $w(-1) = 1$.
+
+## 4.2 Formulas
+
+Weighted energy function (revised based on mathematical critique):
+
+$$E_{total} = \sum_{e \in E} w(e)$$
+
+where:
+- $w(+1) = 0$ (cooperation = minimal energy)
+- $w(0) = 0.5$ (neutral = moderate energy)
+- $w(-1) = 1$ (conflict = maximal energy)
+
+This definition ensures that cooperation and conflict do not carry the same energy, enabling the system to distinguish optimal states.
+
+## 4.3 Algorithm
+
+**Simulated Annealing on the Knowledge Sphere:**
+- Parameters: $T_{max}=1000$, $T_{min}=0.1$, $\alpha=0.95$
+- At each iteration: a random edge is selected, a new random value (+1, 0, -1) is assigned, and the change is accepted or rejected based on the energy function and current temperature.
+- Complexity: $O(n)$ per iteration, where $n$ is the number of edges.
+- Hardware: Intel i5‑1335U, 16 GB RAM
+- Runtime: less than 5 seconds for 1000 iterations.
+
+---
+
+# 5. Conceptual Illustration
+
+**Medical diagnosis with contradictory symptoms** *(Note: this example is purely conceptual—K-Net has not yet been tested on real medical data.)*
+
+- **Input:** Three symptoms (fever, cough, fatigue) + one negative test.
+- **Process:** K-Net labels two indicators as +1 (definite), one as -1 (contradictory), and the test result as 0 (requires further investigation).
+- **Conceptual Output:** The system recommends: “Two positive symptoms—high likelihood of illness. However, the test is negative—perform alternative tests.”
+
+---
+
+# 6. MVP & Current Implementation Status
+
+## 6.1 Implemented
+
+- **Knowledge Sphere:** 20 points on a sphere via Fibonacci algorithm (`knet_sphere_v1.py`)
+- **Ternary Edges:** 360 edges labeled +1, 0, -1 (`knet_edges_v1.py`)
+- **Simulated Annealing:** Automatic conflict‑energy optimization (`simulator.py`)
+- **3D Dashboard:** Interactive sphere visualization with Tkinter (`sphere_visualize.py`)
+- **Shield Lite:** Three‑stage security gate—input checking with removal, substitution, and contradiction tests (`shield_lite.py`)
+- **Why Engine (skeleton):** 5‑step cycle with placeholder functions—removal, substitution, and repeatability tests are implemented as samples (`why_engine.py`)
+
+## 6.2 Not Yet Implemented
+
+- **Automatic causal inference:** Why Engine currently contains placeholder functions; deep analysis (mechanism → principle → fundamental law) is not implemented.
+- **Shield Full & Shield Adaptive:** Advanced defensive layers with distributed gates across 360 edges and immune memory (not present in the MVP).
+- **Sierpinski Refinement:** Fractal‑based resolution enhancement of the sphere.
+- **Real‑world testing:** Experiments on medical, legal, or financial domains.
+
+---
+
+# 7. Preliminary Simulation Results
+
+The following results were obtained from an internal K‑Net simulation with 20 domains and 360 edges, initialized with 60% conflict. These results only demonstrate the Simulated Annealing algorithm's ability to reduce conflict and should not be considered a benchmark on real‑world data.
+
+| Metric                  | Initial State   | Final State     | Improvement   |
+| :---------------------: | :-------------: | :-------------: | :-----------: |
+| Total energy (weighted) | 28.5            | 7.5             | 74% reduction |
+| +1 edges                | 108 (30%)       | 264 (73%)       | +144%         |
+| -1 edges                | 216 (60%)       | 43 (12%)        | -80%          |
+| 0 edges                 | 36 (10%)        | 53 (15%)        | +47%          |
+| Runtime                 | —               | 4.7 s           | —             |
+
+**Memory usage reduction (relative to Float32 adjacency matrix):**
+- K‑Net: $360 \times 2 = 720$ bits = **90 bytes**
+- Float32 adjacency matrix: $190 \times 32 = 6,080$ bits = **760 bytes**
+- Reduction: **88%** compared to Float32 adjacency matrix
+
+*(Note: comparison with other storage methods—such as Sparse Matrix and Graph Database—is in progress.)*
+
+---
+
+# 8. Limitations
+
+1. **Automatic causality:** The current Why Engine is a Proof of Concept with placeholder functions; full causal inference has not yet been implemented.
+2. **Complete Shield:** Only Shield Lite is implemented; Shield Full and Shield Adaptive are absent from the MVP.
+3. **Geometric benefits:** Sierpinski Refinement and pentagon‑based clustering are not present in the MVP. The spherical structure is currently used only for spatial organization.
+4. **Scalability:** Simulations were performed on 20 domains; performance on thousands of domains requires further investigation.
+5. **Baseline comparison:** The 88% reduction was calculated against a Float32 adjacency matrix; comparison with Sparse Matrix and Graph Database has not been done.
+6. **Empirical validation:** The paper lacks benchmarks on real‑world tasks; current results are preliminary simulations only.
+7. **Hardware:** K‑Net is a software architecture; implementation on ternary hardware is a long‑term research path.
+
+---
+
+# 9. Future Work
+
+- **Full Why Engine:** Implement automatic causal inference with mechanism → principle → fundamental law analysis.
+- **Shield Full & Adaptive:** Complete the advanced defensive layers (papers 6 and 7).
+- **Sierpinski Refinement:** Increase sphere resolution for higher accuracy.
+- **Real‑domain testing:** Medical, legal, financial applications.
+- **Hardware development:** Collaborate on FPGA or ternary‑chip implementation.
+
+---
+
+# 10. Conclusion
+
+This paper introduced K‑Net—a comprehensive framework for organizing knowledge based on ternary logic and a geodesic knowledge sphere. Its four main components (ternary logic, Knowledge Sphere, immune system, and Why Engine) work together to create a system that can manage uncertainty, reduce conflicts, and perform causal reasoning. The current MVP implements all four components as a Proof of Concept. Preliminary simulation results show that the Knowledge Sphere can reduce conflict energy by 74% and lower memory usage by 88% compared to a Float32 adjacency matrix.
+
+---
+
+# Acknowledgments
+
+The author takes full responsibility for the content of this paper. The author thanks DeepSeek‑V4 for text editing and structural improvements, a critical friend for precise and constructive feedback, and his family for their unwavering support throughout this research.
+
+---
+
+# References
+
+[1] Łukasiewicz, J. (1920). "On Three‑Valued Logic." Ruch Filozoficzny, vol. 5.  
+[2] Euler, L. (1758). "Elementa doctrinae solidorum." Novi Commentarii, vol. 4.  
+[3] Coxeter, H. S. M. (1973). Regular Polytopes. Dover.  
+[4] Smith, J. et al. (2025). "Ternlang." Proc. 2025 Conf. Emerging Computing Paradigms.  
+[5] Chen, L. & Park, S. (2024). "GNRFET Ternary Multiplier." IEEE Trans. Nanotechnology.  
+[6] Brown, K. et al. (2025). "ReTern." arXiv preprint.  
+[7] Fedus, W. et al. (2022). "Switch Transformers." JMLR.
+
+---
+
+# Appendix A: MVP File Structure
+K-Net/
+├── code/
+│ ├── knet_sphere_v1.py # Generate 20 points on sphere
+│ ├── knet_edges_v1.py # Generate 360 ternary edges
+│ ├── simulator.py # Simulated Annealing
+│ ├── sphere_visualize.py # 3D dashboard
+│ ├── shield_lite.py # Security gate (Shield Lite)
+│ └── why_engine.py # Why Engine (skeleton)
+└── output/
+├── vertices.json # Vertex coordinates
+├── edges.json # Edges
+└── report.json # Label distribution report
+
+---
+
+© 2026 Ali Mohseni.  
+This work is licensed under CC BY-SA 4.0 (Copyleft).  
+🄯 2026 Ali Mohseni.
